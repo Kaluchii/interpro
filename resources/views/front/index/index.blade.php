@@ -1,3 +1,4 @@
+@extends('front.layout')
+@include('front.index.meta')
 @section('content')
-    @include('front.index.meta')
 @endsection

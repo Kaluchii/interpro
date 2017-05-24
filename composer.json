@@ -19,7 +19,8 @@
         "interpro/extractor": "1.0.*",
         "interpro/feedback": "1.0.*",
         "interpro/scalar": "1.0.*",
-        "interpro/seo": "1.0.*"
+        "interpro/seo": "1.0.*",
+        "google/recaptcha": "~1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

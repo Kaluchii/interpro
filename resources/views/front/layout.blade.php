@@ -14,7 +14,7 @@
 <body>
 {{--    {!! $scripts->after_open_field !!}--}}
 
-    <div class="wrapper">
+    <div class="main-wrapper">
         @include('front.header')
         @yield('header')
 
