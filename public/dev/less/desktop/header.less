@@ -28,7 +28,7 @@
     }
 
     .menu-window{
-      right: -320px;
+      right: 0;
     }
   }
 
@@ -37,11 +37,15 @@
     justify-content: space-between;
   }
 
-  &__logo{}
+  &__logo{
+    position: fixed;
+  }
 
   &__home-link{}
 
-  &__logo-img{}
+  &__logo-img{
+    display: block;
+  }
 
   &__menu-toggle{}
 
@@ -54,8 +58,9 @@
 .menu-toggle{
   width: 80px;
   height: 80px;
+  right: 0;
   max-height: 100%;
-  position: relative;
+  position: fixed;
   cursor: pointer;
   overflow: hidden;
   z-index: 10;
@@ -134,9 +139,11 @@
 .menu-window{
   width: 320px;
   height: 100%;
+  box-sizing: border-box;
   position: fixed;
+  padding: 120px 0 30px 25px;
   top: 0;
-  right: 0;
+  right: -320px;
   overflow: hidden;
   background: #ffffff;
   border-left: 1px solid rgba(0,0,0,0.08);
@@ -152,11 +159,27 @@
 
 
 .menu{
-  &__list{}
+  height: 70%;
 
-  &__item{}
+  &__list{
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  &__item{
+    margin: 10px 0;
+  }
 
   &__link{
-    color: #333333;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 50px;
+    transition: all 0.2s ease;
+    color: #000000;
+
+    &:hover{
+      color: rgba(0,0,0,0.6);
+    }
   }
 }

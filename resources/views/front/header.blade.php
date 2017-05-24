@@ -15,9 +15,10 @@
             <div class="header__menu-window menu-window">
                 <nav class="menu-window__menu menu">
                     <ul class="menu__list">
-                        <li class="menu__item"><a href="#" class="menu__link">Пункт меню</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Пункт меню</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Пункт меню</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Агенство</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Услуги</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Портфолио</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Блог</a></li>
                     </ul>
                 </nav>
             </div>
