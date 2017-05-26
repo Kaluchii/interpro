@@ -15,4 +15,16 @@ $(document).ready(function () {
     $('.menu-toggle').on('click', function () {
         $('.header').toggleClass('header--menu-is-open');
     });
+
+    $('.project__description-col').stick_in_parent({
+        offset_top: 100,
+    });
+
+    // if(jQuery().stick_in_parent) {
+    //     setTimeout(function() {
+    //
+    //         jQuery(".project__description-col").stick_in_parent({offset_top:100});
+    //         if (jQuery(window).width() < 769) { jQuery(".project__description-col").trigger("sticky_kit:detach"); }
+    //     }, 400 );
+    // }
 });
