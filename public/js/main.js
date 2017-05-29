@@ -16,9 +16,20 @@ $(document).ready(function () {
         $('.header').toggleClass('header--menu-is-open');
     });
 
+
     $('.project__description-col').stick_in_parent({
-        offset_top: 100,
+         offset_top: 100
+     });
+
+
+    $('.illustrations__item').boxLoader({
+        direction:"x",
+        position: "0",
+        effect: "FadeIn",
+        duration: "1s",
+        windowarea: "50%"
     });
+
 
     // if(jQuery().stick_in_parent) {
     //     setTimeout(function() {
