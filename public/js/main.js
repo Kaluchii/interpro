@@ -22,12 +22,9 @@ $(document).ready(function () {
      });
 
 
-    $('.illustrations__item').boxLoader({
-        direction:"x",
-        position: "0",
-        effect: "FadeIn",
-        duration: "1s",
-        windowarea: "50%"
+    $('.illustrations__item').viewportChecker({
+        classToAdd: 'animated fadeInLeft',
+        offset: 120
     });
 
 
