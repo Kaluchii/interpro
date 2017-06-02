@@ -17,7 +17,7 @@
                     <ul class="menu__list">
                         <li class="menu__item"><a href="#" class="menu__link">Агенство</a></li>
                         <li class="menu__item"><a href="#" class="menu__link">Услуги</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Портфолио</a></li>
+                        <li class="menu__item"><a href="/portfolio" class="menu__link">Портфолио</a></li>
                         <li class="menu__item"><a href="#" class="menu__link">Блог</a></li>
                     </ul>
                 </nav>
