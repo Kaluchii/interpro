@@ -57,10 +57,20 @@ $(document).ready(function () {
 
     function parallaxCol() {
         var alt_difference = large_col.height() - small_col.height();
+        var ratio = (large_col.height()-$(window).height()) / (small_col.height()-$(window).height());
         var scrollTop = $(window).scrollTop();
         var scrollBottom = scrollTop + $(window).height();
 
-        large_col.css('top', 'px')
+        if(scrollTop > 0){
+            if(scrollBottom > small_col.height()){
+                large_col.css('top', -alt_difference + 'px');
+            }else{
+                var increment = (scrollTop * ratio) - scrollTop;
+                large_col.css('top', -increment + 'px');
+            }
+        }else{
+            large_col.css('top', '0');
+        }
     }
 
     // if(jQuery().stick_in_parent) {
