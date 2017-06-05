@@ -1,4 +1,5 @@
 @extends('front.layout')
+@include('front.header_transparent')
 @include('front.index.meta')
 @section('content')
     <section class="content project">

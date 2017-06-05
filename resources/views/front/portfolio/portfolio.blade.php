@@ -1,4 +1,5 @@
 @extends('front.layout')
+@include('front.header')
 @include('front.portfolio.meta')
 @section('content')
     <section class="content portfolio">
@@ -9,8 +10,8 @@
                         <a href="" class="portfolio-item__link">
                             <img src="/dev_img/portfolio-thumb-smart-6.jpg" alt="" class="portfolio-item__img">
                             <div class="portfolio-item__small-descr">
-                                <p class="portfolio-item__category">Графический дизайн</p>
-                                <h2 class="portfolio-item__project-name">Фирменный стиль «Билкома»</h2>
+                                <p class="portfolio-item__category"><span class="portfolio-item__text-animation portfolio-item__text-animation--small">Графический дизайн</span></p>
+                                <h2 class="portfolio-item__project-name"><span class="portfolio-item__text-animation">Фирменный стиль «Билкома»</span></h2>
                             </div>
                         </a>
                     </li>
@@ -18,8 +19,8 @@
                         <a href="" class="portfolio-item__link">
                             <img src="/dev_img/portfolio-thumb-smart-7.jpg" alt="" class="portfolio-item__img">
                             <div class="portfolio-item__small-descr">
-                                <p class="portfolio-item__category">Графический дизайн</p>
-                                <h2 class="portfolio-item__project-name">Листовка про интернет Network.kz</h2>
+                                <p class="portfolio-item__category"><span class="portfolio-item__text-animation portfolio-item__text-animation--small">Графический дизайн</span></p>
+                                <h2 class="portfolio-item__project-name"><span class="portfolio-item__text-animation">Листовка про интернет Network.kz</span></h2>
                             </div>
                         </a>
                     </li>
@@ -27,8 +28,8 @@
                         <a href="" class="portfolio-item__link">
                             <img src="/dev_img/portfolio-thumb-smart-3.jpg" alt="" class="portfolio-item__img">
                             <div class="portfolio-item__small-descr">
-                                <p class="portfolio-item__category">Сайты</p>
-                                <h2 class="portfolio-item__project-name">Промо-сайт пластиковых окон «АРСИ»</h2>
+                                <p class="portfolio-item__category"><span class="portfolio-item__text-animation portfolio-item__text-animation--small">Сайты</span></p>
+                                <h2 class="portfolio-item__project-name"><span class="portfolio-item__text-animation">Промо-сайт пластиковых окон «АРСИ»</span></h2>
                             </div>
                         </a>
                     </li>
@@ -36,8 +37,8 @@
                         <a href="" class="portfolio-item__link">
                             <img src="/dev_img/portfolio-thumb-smart-4.jpg" alt="" class="portfolio-item__img">
                             <div class="portfolio-item__small-descr">
-                                <p class="portfolio-item__category">Графический дизайн</p>
-                                <h2 class="portfolio-item__project-name">Памятки по процедурам «Медстайла»</h2>
+                                <p class="portfolio-item__category"><span class="portfolio-item__text-animation portfolio-item__text-animation--small">Графический дизайн</span></p>
+                                <h2 class="portfolio-item__project-name"><span class="portfolio-item__text-animation">Памятки по процедурам «Медстайла»</span></h2>
                             </div>
                         </a>
                     </li>
@@ -45,8 +46,8 @@
                         <a href="" class="portfolio-item__link">
                             <img src="/dev_img/portfolio-thumb-smart-5.jpg" alt="" class="portfolio-item__img">
                             <div class="portfolio-item__small-descr">
-                                <p class="portfolio-item__category">Интернет-маркетинг</p>
-                                <h2 class="portfolio-item__project-name">Корпоративное новогоднее предложение «ФлорыЭкспресс»</h2>
+                                <p class="portfolio-item__category"><span class="portfolio-item__text-animation portfolio-item__text-animation--small">Интернет-маркетинг</span></p>
+                                <h2 class="portfolio-item__project-name"><span class="portfolio-item__text-animation">Корпоративное новогоднее предложение «ФлорыЭкспресс»</span></h2>
                             </div>
                         </a>
                     </li>
@@ -54,8 +55,8 @@
                         <a href="" class="portfolio-item__link">
                             <img src="/dev_img/portfolio-thumb-smart-1.jpg" alt="" class="portfolio-item__img">
                             <div class="portfolio-item__small-descr portfolio-item__small-descr--text-light">
-                                <p class="portfolio-item__category">Сайты</p>
-                                <h2 class="portfolio-item__project-name">Интернет-ресторан «Деливеро»</h2>
+                                <p class="portfolio-item__category"><span class="portfolio-item__text-animation portfolio-item__text-animation--small">Сайты</span></p>
+                                <h2 class="portfolio-item__project-name"><span class="portfolio-item__text-animation">Интернет-ресторан «Деливеро»</span></h2>
                             </div>
                         </a>
                     </li>
@@ -65,8 +66,8 @@
                         <a href="" class="portfolio-item__link">
                             <img src="/dev_img/portfolio-thumb-smart-2.jpg" alt="" class="portfolio-item__img">
                             <div class="portfolio-item__small-descr portfolio-item__small-descr--text-light">
-                                <p class="portfolio-item__category">Интерфейсы</p>
-                                <h2 class="portfolio-item__project-name">Обновленный интерфейс оформления билета на Flight.kz</h2>
+                                <p class="portfolio-item__category"><span class="portfolio-item__text-animation portfolio-item__text-animation--small">Интерфейсы</span></p>
+                                <h2 class="portfolio-item__project-name"><span class="portfolio-item__text-animation">Обновленный интерфейс оформления билета на Flight.kz</span></h2>
                             </div>
                         </a>
                     </li>
@@ -74,8 +75,8 @@
                         <a href="" class="portfolio-item__link">
                             <img src="/dev_img/portfolio-thumb-smart-8.jpg" alt="" class="portfolio-item__img">
                             <div class="portfolio-item__small-descr portfolio-item__small-descr--text-light">
-                                <p class="portfolio-item__category">Интерфейсы</p>
-                                <h2 class="portfolio-item__project-name">Интерфейс бронирования отелей на Flight.kz</h2>
+                                <p class="portfolio-item__category"><span class="portfolio-item__text-animation portfolio-item__text-animation--small">Интерфейсы</span></p>
+                                <h2 class="portfolio-item__project-name"><span class="portfolio-item__text-animation">Интерфейс бронирования отелей на Flight.kz</span></h2>
                             </div>
                         </a>
                     </li>
@@ -83,8 +84,8 @@
                         <a href="" class="portfolio-item__link">
                             <img src="/dev_img/portfolio-thumb-smart-9.jpg" alt="" class="portfolio-item__img">
                             <div class="portfolio-item__small-descr portfolio-item__small-descr--text-light">
-                                <p class="portfolio-item__category">Сайты</p>
-                                <h2 class="portfolio-item__project-name">Интернет-магазин цветочного оформления «Флорифисента»</h2>
+                                <p class="portfolio-item__category"><span class="portfolio-item__text-animation portfolio-item__text-animation--small">Сайты</span></p>
+                                <h2 class="portfolio-item__project-name"><span class="portfolio-item__text-animation">Интернет-магазин цветочного оформления «Флорифисента»</span></h2>
                             </div>
                         </a>
                     </li>
@@ -92,8 +93,8 @@
                         <a href="" class="portfolio-item__link">
                             <img src="/dev_img/portfolio-thumb-smart-10.jpg" alt="" class="portfolio-item__img">
                             <div class="portfolio-item__small-descr portfolio-item__small-descr--text-light">
-                                <p class="portfolio-item__category">Сайты</p>
-                                <h2 class="portfolio-item__project-name">Промо-страница и слоган для бонусной программы Flight.kz</h2>
+                                <p class="portfolio-item__category"><span class="portfolio-item__text-animation portfolio-item__text-animation--small">Сайты</span></p>
+                                <h2 class="portfolio-item__project-name"><span class="portfolio-item__text-animation">Промо-страница и слоган для бонусной программы Flight.kz</span></h2>
                             </div>
                         </a>
                     </li>
@@ -101,8 +102,8 @@
                         <a href="" class="portfolio-item__link">
                             <img src="/dev_img/portfolio-thumb-smart-11.jpg" alt="" class="portfolio-item__img">
                             <div class="portfolio-item__small-descr portfolio-item__small-descr--text-light">
-                                <p class="portfolio-item__category">Иллюстрации</p>
-                                <h2 class="portfolio-item__project-name">Мы откроем супер-сайт!</h2>
+                                <p class="portfolio-item__category"><span class="portfolio-item__text-animation portfolio-item__text-animation--small">Иллюстрации</span></p>
+                                <h2 class="portfolio-item__project-name"><span class="portfolio-item__text-animation">Мы откроем супер-сайт!</span></h2>
                             </div>
                         </a>
                     </li>

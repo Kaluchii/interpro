@@ -34,43 +34,67 @@ $(document).ready(function () {
     }
 
 
-    // Обрезка блока портфолио по меньшему из столбцов
+    // Алгоритм для двухколоночного блока, с параллакс эффектом у большей из колонок
     if ($('.portfolio__half-screen-col').length > 0) {
         var small_col = $('.portfolio__half-screen-col:first-child');
         var large_col = $('.portfolio__half-screen-col:last-child');
 
-        if($('.portfolio__half-screen-col:last-child').height() < small_col.height()){
-            small_col = $('.portfolio__half-screen-col:last-child');
-            large_col = $('.portfolio__half-screen-col:first-child');
-        }
-        $('.portfolio__content').css({'overflow': 'hidden', 'height': small_col.height() + 'px'});
-        large_col.css('position', 'relative');
-
-
-
-
-
-
-
-        $(window).on('load resize scroll', parallaxCol);
-    }
-
-    function parallaxCol() {
-        var alt_difference = large_col.height() - small_col.height();
-        var ratio = (large_col.height()-$(window).height()) / (small_col.height()-$(window).height());
-        var scrollTop = $(window).scrollTop();
-        var scrollBottom = scrollTop + $(window).height();
-
-        if(scrollTop > 0){
-            if(scrollBottom > small_col.height()){
-                large_col.css('top', -alt_difference + 'px');
-            }else{
-                var increment = (scrollTop * ratio) - scrollTop;
-                large_col.css('top', -increment + 'px');
+        // Обрезка блока портфолио по меньшему из столбцов
+        function parallaxColResize() {
+            if($('.portfolio__half-screen-col:last-child').height() < small_col.height()){
+                small_col = $('.portfolio__half-screen-col:last-child');
+                large_col = $('.portfolio__half-screen-col:first-child');
             }
-        }else{
-            large_col.css('top', '0');
+            $('.portfolio__content').css({'overflow': 'hidden', 'height': small_col.height() + 'px'});
+            large_col.css('position', 'relative');
         }
+
+        // Ускоренный скролл для большего из столбцов
+        function parallaxCol() {
+            var scrollTop = $(window).scrollTop();
+
+            if(scrollTop > 0){
+                var scrollBottom = scrollTop + $(window).height();
+
+                if(scrollBottom > small_col.height()){
+                    var alt_difference = large_col.height() - small_col.height();
+                    large_col.css('top', -alt_difference + 'px');
+                }else{
+                    var ratio = (large_col.height() - $(window).height()) / (small_col.height() - $(window).height());
+                    var increment = (scrollTop * ratio) - scrollTop;
+                    large_col.css('top', -increment + 'px');
+                }
+            }else{
+                large_col.css('top', '0');
+            }
+        }
+
+        $(window).on('resize', function () {
+            if($(window).width() > 768){
+                parallaxColResize();
+                parallaxCol();
+            }else{
+                $('.portfolio__content').attr('style', '');
+                large_col.attr('style', '');
+            }
+        });
+        $(window).on('load', function () {
+            if($(window).width() > 768){
+                parallaxColResize();
+                parallaxCol();
+            }
+        });
+        $(window).on('scroll', function () {
+            if($(window).width() > 768){
+                parallaxCol();
+            }
+        });
+
+
+        $('.portfolio-item').viewportChecker({
+            classToAdd: 'animated fadeInLeft',
+            offset: 120
+        });
     }
 
     // if(jQuery().stick_in_parent) {

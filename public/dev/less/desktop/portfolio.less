@@ -23,6 +23,8 @@
 
 
 .portfolio-item{
+  opacity: 0;
+
   &__link{
     overflow: hidden;
     height: auto;
@@ -57,6 +59,7 @@
     font-size: 14px;
     color: inherit;
     text-transform: uppercase;
+    overflow: hidden;
   }
 
   &__project-name{
@@ -64,5 +67,26 @@
     font-weight: normal;
     color: inherit;
     margin-top: 10px;
+    overflow: hidden;
+  }
+
+  &__text-animation{
+    display: inline-block;
+    font-size: inherit;
+
+    transform: translateY(-100%);
+    transition: transform 0.8s cubic-bezier(0.600, 0.040, 0.170, 0.980);
+    transition-timing-function: cubic-bezier(0.600, 0.040, 0.170, 0.980);
+    transition-delay: 1.2s;
+
+    &--small{
+      transition-delay: 1s;
+    }
+  }
+}
+
+.animated{
+  .portfolio-item__text-animation{
+    transform: translateY(0);
   }
 }

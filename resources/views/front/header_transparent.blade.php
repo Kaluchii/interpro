@@ -1,5 +1,5 @@
 @section('header')
-    <header class="header">
+    <header class="header header--transparent">
         <div class="header__wrapper{{-- wrapper-1600--}}">
             <div class="header__logo">
                 <a href="/" class="header__home-link">
