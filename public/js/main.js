@@ -19,11 +19,39 @@ $(document).ready(function () {
 
     // Липкий текст на странице проекта
     if ($('.project__description-col').length > 0) {
-        $('.project__description-col').stick_in_parent({
-            offset_top: 100
+        function stickyProjectCol() {
+            $('.project__description-col').stick_in_parent({
+                offset_top: 100
+            });
+        }
+
+        function detachProjectCol() {
+            $('.project__description-col').trigger("sticky_kit:detach");
+        }
+
+        $(window).on('load', function () {
+            var stickable;
+            stickable = $('.illustrations').height() > $('.description').height()+100;
+            if(($(window).width() > 768) && stickable){
+                stickyProjectCol();
+            }
+        });
+
+        $(window).on('resize', function () {
+            var stickable;
+            stickable = $('.illustrations').height() > $('.description').height()+100;
+            if(($(window).width() > 768) && stickable){
+                stickyProjectCol();
+            }else{
+                if($().stick_in_parent){
+                    detachProjectCol();
+                }
+            }
         });
     }
 
+// TODO: реализовать поочередную анимацию илюстраций при загрузке страницы
+// TODO: сделать прелоадер для всей страницы, и плавное появление всего контента на странице
 
     // Анимация появления илюстраций на странице проекта
     if ($('.illustrations__item').length > 0) {
@@ -91,17 +119,11 @@ $(document).ready(function () {
         });
 
 
+        // Анимация появления элементов списка проектов
         $('.portfolio-item').viewportChecker({
             classToAdd: 'animated fadeInLeft',
             offset: 120
         });
     }
 
-    // if(jQuery().stick_in_parent) {
-    //     setTimeout(function() {
-    //
-    //         jQuery(".project__description-col").stick_in_parent({offset_top:100});
-    //         if (jQuery(window).width() < 769) { jQuery(".project__description-col").trigger("sticky_kit:detach"); }
-    //     }, 400 );
-    // }
 });
