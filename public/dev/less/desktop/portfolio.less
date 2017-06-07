@@ -18,6 +18,20 @@
   vertical-align: top;
   transition: top .2s ease;
 
+  &:last-child{
+    .portfolio-item{
+      &:nth-child(even){
+        animation-delay: 0.2s;
+        animation-duration: 1s;
+      }
+
+      &:nth-child(3n){
+        animation-delay: 0.3s;
+        animation-duration: 1.2s;
+      }
+    }
+  }
+
   &__item{}
 }
 
@@ -26,13 +40,13 @@
   opacity: 0;
 
   &:nth-child(even){
-    animation-delay: 0.1s;
+    animation-delay: 0.3s;
     animation-duration: 1.1s;
   }
 
   &:nth-child(3n){
     animation-delay: 0.2s;
-    animation-duration: .9s;
+    animation-duration: 1s;
   }
 
   &__link{
